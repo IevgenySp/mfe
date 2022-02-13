@@ -17,8 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: npm install -g --unsafe-perm node-sass --save
-      - run: npm install --force
+      - run: npm install --unsafe-perm node-sass --save
+      - run: npm install --force --unsafe-perm
       - run: npm run build
         env:
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
